@@ -3,9 +3,9 @@ const fs = require('fs');
 const solc = require('solc');
 
 
-const inboxPath = path.resolve(__dirname, 'contracts', 'Inbox.sol');
-const source = fs.readFileSync(inboxPath, 'utf8');
+const rafflePath = path.resolve(__dirname, 'contracts', 'Raffle.sol');
+const source = fs.readFileSync(rafflePath, 'utf8');
 
 //console.log(solc.compile(source, 1)); //solc.compile returns an object
 
-module.exports = solc.compile(source, 1).contracts[':Inbox'];
+module.exports = solc.compile(source, 1).contracts[':Raffle'];
