@@ -4,7 +4,7 @@ contract Raffle {
     address public manager;
     address[] public players;
     
-    constructor () public payable{
+    function Raffle() public payable{
         manager = msg.sender;
     }
     
