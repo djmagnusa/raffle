@@ -78,6 +78,18 @@ describe('Raffle Contract', () => {
          
      });
 
+     
+    it('only manager can call pickWinner', async () => {
+        try {
+          await raffle.methods.pickWinner().send({
+            from: accounts[1] //not the manager
+          });
+          assert(false); //fail the test
+        } catch(err) {
+          assert(err);
+        }
+    })
+
    
     
 });
