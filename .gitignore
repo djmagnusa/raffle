@@ -1,6 +1,6 @@
 node_modules/
 .vscode/
-config.env
+.env
 
 # misc
 .DS_Store
